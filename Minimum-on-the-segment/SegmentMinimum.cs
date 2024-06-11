@@ -11,16 +11,16 @@ namespace Minimum_on_the_segment
     {
         public static void FindMinimumOnRange(int n, int k, int[] array)
         {
-            List<int[]> numbers = new List<int[]>();
+            List<int[]> subarrays = new List<int[]>();
 
             for (int i = 0; i < array.Length - k + 1; i++)
             {
-                int[] number = new int[k];
-                Array.Copy(array, i, number, 0, k);
-                numbers.Add(number);
+                int[] subarray = new int[k];
+                Array.Copy(array, i, subarray, 0, k);
+                subarrays.Add(subarray);
             }
 
-            foreach (int[] num in numbers)
+            foreach (int[] num in subarrays)
             {
                 Console.WriteLine(num.Min());
             }
